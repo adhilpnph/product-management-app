@@ -24,7 +24,7 @@ form{
   grid-template-columns: 1fr 5fr;
   gap: 11px;
   padding: 60px;
-  
+  box-sizing: border-box;
   width: 100%;
   max-width: 40rem ;
   background-color: rgba(0, 0, 0, 0.858);
@@ -107,7 +107,9 @@ form input{
   form{
     grid-template-columns: 1fr;
     max-width: 20rem;
-    margin:0 auto ;
+    
+    
+    padding: 20px;
     top: 56%;
   }
  

@@ -53,7 +53,7 @@ export default function EditProduct(){
         e.preventDefault()
         if(!isNaN(titleRef.current.value)){
             alert("Title cannot have numbers alone")
-        return;
+            return;
                 
 
         

@@ -6,7 +6,7 @@
     
     
     padding: 60px;
-    
+    box-sizing: border-box;
     width: 100%;
     max-width: 40rem ;
     background-color: rgba(0, 0, 0, 0.858);
@@ -93,7 +93,9 @@ h1{
 font-size: 1.1rem;
 }
 header{
-    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.642);
     padding: 20px;
 }
@@ -139,7 +141,12 @@ header nav .logout,.nav-link{
 @media (max-width: 767px) {
     .dashboard-container{
         max-width: 20rem;
-        margin:0 auto ;
+        padding: 20px;
         top: 56%;
+    }
+}
+@media (max-width: 328px) {
+    .update-btn,.delete-btn{
+        font-size: 0.7rem;
     }
 }
