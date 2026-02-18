@@ -3,9 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   
-  background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)),
-    url("./assets/backGround.jpg");
+ 
 
   background-color: rgb(98, 129, 129);
   
@@ -14,6 +12,14 @@
 html,body{
   margin: 0;
   min-height: 100vh;
+}
+body{
+  background-size: cover;
+  background-position: center;
+  background:
+  
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)),
+    url("./assets/backGround.jpg");
 }
 form{
   position: fixed;

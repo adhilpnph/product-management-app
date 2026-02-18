@@ -15,7 +15,7 @@ export default function Login(){
     const handleSubmit=(e)=>{
         e.preventDefault();
         if (form.emailError || form.passwordError||!form.email || !form.password) {
-            alert("Fill out all details first!")
+            
             return;
         }
         const fakeToken="1234";
@@ -73,7 +73,7 @@ export default function Login(){
                             placeholder="abcd@somemail.com"
                             name="email"
                             onChange={handleChange}
-                            value={form.email} 
+                            value={form.email} required
                         />
                     </fieldset>
                     
@@ -84,7 +84,7 @@ export default function Login(){
                         placeholder="*****"
                         name="password"
                         onChange={handleChange}
-                        value={form.password} 
+                        value={form.password}  required
                     />
                     </fieldset>
                     {form.passwordError!=""? <div className="error">{form.passwordError}</div>:""}

@@ -52,7 +52,7 @@ export default function EditProduct(){
     const handleSubmit=async (e)=>{
         e.preventDefault()
         if(!isNaN(titleRef.current.value)){
-            alert("Title cannot have numbers alone")
+            
             return;
                 
 
