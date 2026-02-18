@@ -51,6 +51,13 @@ export default function EditProduct(){
     },[id])
     const handleSubmit=async (e)=>{
         e.preventDefault()
+        if(!isNaN(titleRef.current.value)){
+            alert("Title cannot have numbers alone")
+        return;
+                
+
+        
+        }
         const formData={
             ...form,
             price:Number(form.price)

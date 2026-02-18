@@ -10,8 +10,7 @@ export default function CreateProduct(){
     })
     const titleRef=useRef(null)
     const [success,setSuccess]=useState(null)
-    // const [title,setTitle]=useState("");
-    // const [price,setPrice]=useState("");
+    
     const navigate=useNavigate()
     const handleChange=(e)=>{
         const {name,value}=e.currentTarget
