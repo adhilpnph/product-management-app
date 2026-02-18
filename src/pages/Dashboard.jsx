@@ -16,14 +16,16 @@ export default function Dashboard(){
     }
     return(
         <>
-            
-                <div className="dashboard-container">
-                    <h1>Dashboard</h1>
-                    <Link to={"/Products"}><button className="dashboard-products" >View Products</button></Link>
-                    <Link to={"/create-product"}><button className="dashboard-products" >Add Product +</button></Link>
-                    <button className="logout-btn" onClick={handleLogout}>Logout</button>
+               <div className="page-center">
+                    <div className="dashboard-container">
+                        <h1>Dashboard</h1>
+                        <Link to={"/Products"}><button className="dashboard-products" >View Products</button></Link>
+                        <Link to={"/create-product"}><button className="dashboard-products" >Add Product +</button></Link>
+                        <button className="logout-btn" onClick={handleLogout}>Logout</button>
         
-                </div>
+                    </div>
+                </div> 
+                
                 
             
         </>

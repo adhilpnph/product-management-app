@@ -61,20 +61,23 @@ export default function CreateProduct(){
     return(
         <>
         
+            <div className="page-center">
+
+                <form onSubmit={handleSubmit}>
+                    <h1>Create product</h1>
+                    <label>Title</label>
+                    <input type="text"  ref={titleRef} name="title" placeholder="pen"
+                    value={form.title} onChange={handleChange} required/>
+                    {form.titleError!=""?<div className="error">{form.titleError}</div>:""} 
+                    <label>Price</label>
+                    <input type="number"   name="price" placeholder="10.5" value={form.price}  onChange={handleChange} required/>
+                    
+                    <button  className="submit" type="submit"> Add</button>
+                    <Link to={"/Products"}><button >Back</button></Link>
+                    {success && <p className="success">{success}</p>}
+                </form>
+            </div>
             
-            <form onSubmit={handleSubmit}>
-                <h1>Create product</h1>
-                <label>Title</label>
-                <input type="text"  ref={titleRef} name="title" placeholder="pen"
-                value={form.title} onChange={handleChange} required/>
-                {form.titleError!=""?<div className="error">{form.titleError}</div>:""} 
-                <label>Price</label>
-                <input type="number"   name="price" placeholder="10.5" value={form.price}  onChange={handleChange} required/>
-                
-                <button  className="submit" type="submit"> Add</button>
-                <Link to={"/Products"}><button >Back</button></Link>
-                {success && <p className="success">{success}</p>}
-            </form>
         
 
         

@@ -62,34 +62,36 @@ export default function Login(){
 
     return(
         <>
-            
-            <form className="login-form" onSubmit={handleSubmit}>
+            <div className="page-center">
+                <form className="login-form" onSubmit={handleSubmit}>
                 
-                <h1>Login</h1>
-                <fieldset>
-                    <legend>Email</legend>
-                    <input className="email-input" type="email"
-                        ref={emailRef}
-                        placeholder="abcd@somemail.com"
-                        name="email"
+                    <h1>Login</h1>
+                    <fieldset>
+                        <legend>Email</legend>
+                        <input className="email-input" type="email"
+                            ref={emailRef}
+                            placeholder="abcd@somemail.com"
+                            name="email"
+                            onChange={handleChange}
+                            value={form.email} 
+                        />
+                    </fieldset>
+                    
+                    {form.emailError!=""? <div  className="error">{form.emailError}</div>:""}
+                    <fieldset>
+                        <legend>Password</legend>
+                    <input className="password-input" type="password"
+                        placeholder="*****"
+                        name="password"
                         onChange={handleChange}
-                        value={form.email} 
+                        value={form.password} 
                     />
-                </fieldset>
-                
-                {form.emailError!=""? <div  className="error">{form.emailError}</div>:""}
-                <fieldset>
-                    <legend>Password</legend>
-                <input className="password-input" type="password"
-                    placeholder="*****"
-                    name="password"
-                    onChange={handleChange}
-                    value={form.password} 
-                />
-                </fieldset>
-                {form.passwordError!=""? <div className="error">{form.passwordError}</div>:""}
-                <button className="login-btn" type="submit">Login</button>
-            </form>
+                    </fieldset>
+                    {form.passwordError!=""? <div className="error">{form.passwordError}</div>:""}
+                    <button className="login-btn" type="submit">Login</button>
+                    </form>
+            </div>
+            
             
         </>
         

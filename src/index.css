@@ -17,9 +17,7 @@ html,body{
 }
 form{
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  
   display: grid;
   grid-template-columns: 1fr 5fr;
   gap: 11px;
@@ -36,7 +34,14 @@ form label{
   color: white;
   
 }
-
+.page-center{
+    min-height: 80vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 form h1,form button,form a{
   grid-column: 1/-1;
 }
@@ -110,7 +115,7 @@ form input{
     
     
     padding: 20px;
-    top: 56%;
+    
   }
  
   header nav .logout,.nav-link{

@@ -80,7 +80,7 @@ export default function EditProduct(){
     return(
         <>
             
-            
+            <div className="page-center">
                 <form onSubmit={handleSubmit}>
                 <h1>Edit Product</h1>
                 <label>Title:</label>
@@ -92,6 +92,8 @@ export default function EditProduct(){
                 <Link  to={"/Products"}><button>Back</button></Link>
                 {success && <p className="success">{success}</p>}
                 </form>
+            </div>
+                
             
             
         </>
