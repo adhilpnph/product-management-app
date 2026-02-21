@@ -43,7 +43,7 @@ h1{
     color: white;
 }
 .delete-btn:hover{
-    background: #ffe6e6;
+    
     background: rgb(189, 116, 116);
 }
 .page{
@@ -56,8 +56,7 @@ h1{
 }
 .product-card{
     
-    background-color: rgb(223, 221, 221);
-    background-color: rgba(0, 0, 0, 0.642);
+    
     background-color: rgb(223, 221, 221);
     color: black;
     border-radius: 10px;
