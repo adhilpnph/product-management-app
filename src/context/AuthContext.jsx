@@ -14,9 +14,9 @@ export function AuthProvider({children}){
         localStorage.removeItem("token")
         setToken(null)
     }
-
+    const [products,setProducts]=useState([]);
     return(
-        <AuthContext.Provider value={{token,logOut,login}}>
+        <AuthContext.Provider value={{token,logOut,login,products,setProducts}}>
             {children}
 
         </AuthContext.Provider>

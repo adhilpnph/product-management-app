@@ -1,15 +1,15 @@
-.dashboard-container{
-    position: fixed;
+.dashboard-actions{
+   
+    display: flex;
     
+    justify-content: center;
+    gap: 20px;
     
-    
-    padding: 60px;
-    box-sizing: border-box;
     width: 100%;
-    max-width: 40rem ;
-    background-color: rgba(0, 0, 0, 0.858);
     
-    border-radius: 5px;
+}
+.dashboard-actions a{
+    flex: 1;
 }
 .logout-btn{
     grid-column: span 2;
@@ -28,10 +28,12 @@
 .actions button{
     border: none;
     padding: 10px;
+    background: transparent;
     border-radius: 5px;
     width: 100%;
     
 }
+
 h1{
     color: white;
     text-shadow: 4px 4px 4px  black;
@@ -40,7 +42,10 @@ h1{
     background-color: rgb(146, 40, 40);
     color: white;
 }
-
+.delete-btn:hover{
+    background: #ffe6e6;
+    background: rgb(189, 116, 116);
+}
 .page{
     max-width: 50rem;
     margin: 0 auto;
@@ -52,7 +57,8 @@ h1{
 .product-card{
     
     background-color: rgb(223, 221, 221);
-    
+    background-color: rgba(0, 0, 0, 0.642);
+    background-color: rgb(223, 221, 221);
     color: black;
     border-radius: 10px;
     padding:20px;
@@ -63,10 +69,20 @@ h1{
     
 }
 .product-card:hover{
-    box-shadow: -0.3px 1px 3px 1px rgb(200, 200, 200);
-    transform: scale(1.01);
+    box-shadow: -0.3px 1px 10px 1px rgb(69, 69, 69);
+    transform: translateY(-5px);
     
     
+}
+.product-card img{
+    max-height: 8rem;
+    max-width: 5rem;
+    
+}
+.details{
+    display: flex;
+    gap: 50px;
+    padding: 20px;
 }
 .add-btn{
     margin-bottom: 20px;
@@ -78,19 +94,24 @@ h1{
     
     font-size: 1.1rem;
 }
-.add-btn:hover{
-    border: solid black 2px;
-    
-    
-}
+
 .login-btn,.update-btn{
     background-color: rgb(203, 203, 80) ;
     font-weight: 700;
     
 }
+.update-btn:hover{
+    background: #e6f0ff;
+}
 .login-btn{
 font-size: 1.1rem;
 }
+.login-btn:hover,.submit:hover{
+    background-color: black;
+    border: rgb(203, 203, 80) solid 2px;
+    color: rgb(203, 203, 80) ;
+}
+
 header{
     position: sticky;
     top: 0;
@@ -128,6 +149,17 @@ header nav div,.nav-link {
 }
 .dashboard-products{
     background-color: rgb(181, 198, 198);
+    border: none;
+    
+}
+.dashboard-products:hover,.add-btn:hover,.back-btn:hover{
+    
+    background-color: black;
+    color: white;
+}
+.back-btn:hover{
+    
+    border: white solid 2px;
 }
 .error{
     color: red;
@@ -136,13 +168,78 @@ header nav div,.nav-link {
 header nav .logout,.nav-link{
     cursor: pointer;
 }
+header nav :hover {
+    color: black;
+
+}
+.dashboard-layout{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding: 24px 24px 80px 24px;
+}
+.dashboard-main{
+     
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    
+
+}
+.chart-card{
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.642);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.stat-card{
+    background-color: rgba(0, 0, 0, 0.642);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    color: lightgray;
+    transition: transform 0.3s ease;
+}
+.stat-card:hover{
+    transform: translateY(-2px);
+}
+.stat-grid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(255px,1fr));
+}
 
 @media (max-width: 767px) {
-    .dashboard-container{
-        max-width: 20rem;
-        padding: 20px;
+    
+    .details{
+        flex-direction: column;
         
+        align-items: center;
     }
+    .details img{
+       max-height: 7rem;
+    }
+    .text{
+        align-self: flex-start;
+        justify-content: center;
+    }
+    .title{
+        font-size: 0.899rem;
+    }
+    .dashboard-products,.stat-card,.add-btn{
+        font-size: 0.875rem;
+    }
+    
 }
 @media (max-width: 328px) {
     .update-btn,.delete-btn{

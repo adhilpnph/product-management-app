@@ -89,7 +89,7 @@ export default function EditProduct(){
                 <label>Price:</label>
                 <input type="number"   value={form.price} name="price" onChange={handleChange}required/>
                 <button className="submit" type="submit">Edit</button>
-                <Link  to={"/Products"}><button>Back</button></Link>
+                <Link  to={"/Products"}><button className="back-btn">Back</button></Link>
                 {success && <p className="success">{success}</p>}
                 </form>
             </div>

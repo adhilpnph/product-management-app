@@ -24,7 +24,7 @@ form{
   box-sizing: border-box;
   width: 100%;
   max-width: 40rem ;
-  background-color: rgba(0, 0, 0, 0.858);
+  background-color: rgba(0, 0, 0, 0.642);
   
   border-radius: 5px;
 }
@@ -77,7 +77,7 @@ button{
 button:hover{
   
   
-  transform: scale(1.01);
+  
   cursor: pointer;
 }
 .success {

@@ -80,7 +80,7 @@ export default function CreateProduct(){
                     <input type="number"   name="price" placeholder="10.5" value={form.price}  onChange={handleChange} required/>
                     
                     <button  className="submit" type="submit"> Add</button>
-                    <Link to={"/Products"}><button >Back</button></Link>
+                    <Link to={"/Products"}><button className="back-btn">Back</button></Link>
                     {success && <p className="success">{success}</p>}
                 </form>
             </div>

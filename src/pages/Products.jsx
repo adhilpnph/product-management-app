@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react"
 import axiosInstance from "../api/axios";
 import { Link } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import deleteIcon from "../assets/trash.svg"
+import editIcon from "../assets/pencil-square.svg"
 export default function Products(){
-    const [products,setProducts]=useState([]);
+    
     const [loading,setLoading]=useState(true);
     const [error,setError]=useState(null)
+    const {products,setProducts}=useAuth()
     const api=axiosInstance
     useEffect(()=>{
         const fetchProducts=async ()=>{
             try{
                 const res=await api.get("/products")
                 setProducts(res.data)
+                
             }catch(err){
                 setError("Error fetching products")
                 console.log("Error fetching products");
@@ -47,16 +52,24 @@ export default function Products(){
                         (product)=>
                         (
                             <div className="product-card" key={product.id}>
-                                <h4>{product.title}</h4>
-                                <h4>{product.price} AED</h4>
+                                <div className="details">
+                                    <img src={product.image} alt="" />
+                                    <div className="text">
+                                        <h3 className="title">{product.title}</h3>
+                                        <h4 className="price">{product.price} AED</h4>
+                                        
+                                    </div>
+                            
+                                </div>
+                                
                                 <div className="actions">
 
                                 
                                     <Link to={`/edit-product/${product.id}`}>
-                                    <button className="update-btn">Update Product</button>
+                                    <button className="update-btn"><img src={editIcon} alt="edit"/></button>
                                     </Link>
                                     
-                                    <button className="delete-btn"  onClick={()=>handleDelete(product.id)}>Delete Product</button>
+                                    <button className="delete-btn"  onClick={()=>handleDelete(product.id)}><img src={deleteIcon} alt="delete"/></button>
                                 </div>
                             </div>
                     

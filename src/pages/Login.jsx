@@ -20,7 +20,7 @@ export default function Login(){
         }
         const fakeToken="1234";
         login(fakeToken)
-        alert("Logged In")
+        
         navigate("/Dashboard")
 
     }
